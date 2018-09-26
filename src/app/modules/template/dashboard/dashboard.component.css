@@ -1,0 +1,30 @@
+.color1{
+    background-color: #00bcd4;
+}
+.color2{
+    background-color: #ff5252;
+}
+.color3{
+    background-color: #00bfa5;
+}
+.color4{
+    background-color: #ff6e40;
+}
+
+.card{
+    border: 0;
+}
+
+.summaryIcon{
+    color: white;
+    opacity: 0.5;
+    font-size: 1.4rem;
+    position: absolute;
+}
+
+.label{
+    font-size: 1.1rem;
+    color: white;
+    font-variant: small-caps;
+}
+

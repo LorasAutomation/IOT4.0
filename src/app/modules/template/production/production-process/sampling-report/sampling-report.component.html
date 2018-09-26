@@ -1,0 +1,68 @@
+  <h5><i class="fas fa-laptop"></i>&nbsp;&nbsp;First Piece/ Last Piece Sampling Report</h5>
+  
+<div class="d-flex justify-content-between mt-3">
+  <div class="btn-group">
+    <label class="btn btn-info btn-sm" [(ngModel)]="shiftModel"
+           btnRadio="shift1" tabindex="0" role="button" name="shift">Shift 1</label>
+    <label class="btn btn-info btn-sm" [(ngModel)]="shiftModel"
+           btnRadio="shift2" tabindex="0" role="button" name="shift">Shift 2</label>
+    <label class="btn btn-info btn-sm" [(ngModel)]="shiftModel"
+           btnRadio="shift3" tabindex="0" role="button" name="shift">Shift 3</label>
+  </div>
+  <div class="btn-group">
+    <label class="btn btn-secondary btn-sm" [(ngModel)]="pageModel" [routerLink]="'sr-page1'"
+           btnRadio="page-1" tabindex="0" role="button" name="page">Page 1</label>
+    <label class="btn btn-secondary btn-sm" [(ngModel)]="pageModel" [routerLink]="'sr-page2'"
+           btnRadio="page-2" tabindex="0" role="button" name="page">Page 2</label>
+  </div>
+</div>
+
+<div class="form-row mt-4">
+    <div class="form-group col-md-3">
+      <label for="date">Date</label>
+      <input type="date" class="form-control" id="date" placeholder="Enter the Date">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="mName">Machine No</label>
+      <input type="text" class="form-control" id="mName" placeholder="Enter the Machine Number">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="customer">Customer</label>
+      <input type="text" class="form-control" id="customer" placeholder="Enter Customer Name">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="material">Material</label>
+      <input type="text" class="form-control" id="material" placeholder="Enter Material">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-3">
+      <label for="pName">Part Name</label>
+      <input type="text" class="form-control" id="pName" placeholder="Enter Part Name">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="color">Grade Color</label>
+      <input type="text" class="form-control" id="color" placeholder="Enter Grade Color">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="pNumber">Part Number</label>
+      <input type="text" class="form-control" id="pNumber" placeholder="Enter Part Number">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="materialLot">Material Lot</label>
+      <input type="text" class="form-control" id="materialLot" placeholder="Enter Material Lot">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-3">
+      <label for="operationName">Operation Name</label>
+      <input type="text" class="form-control" id="operationName" placeholder="Enter Operation Name">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="modeOfOperation">Mode Of Operation</label>
+      <input type="text" class="form-control" id="modeOfOperation" placeholder="Enter Mode Of Operation">
+    </div>
+  </div>
+  
+  <router-outlet></router-outlet>
+ 

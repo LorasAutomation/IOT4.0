@@ -1,0 +1,140 @@
+<h5><i class="fas fa-laptop"></i>&nbsp;&nbsp;In-Process Inspection Report</h5>
+<div class="btn-group mt-3">
+        <label class="btn btn-info btn-sm" [(ngModel)]="shiftModel"
+               btnRadio="shift1" tabindex="0" role="button" name="shift">Shift 1</label>
+        <label class="btn btn-info btn-sm" [(ngModel)]="shiftModel"
+               btnRadio="shift2" tabindex="0" role="button" name="shift">Shift 2</label>
+        <label class="btn btn-info btn-sm" [(ngModel)]="shiftModel"
+               btnRadio="shift3" tabindex="0" role="button" name="shift">Shift 3</label>
+</div>
+<div class="form-row mt-2">
+    <div class="form-group col-md-3">
+        <label for="customer">Customer</label>
+        <input type="text" class="form-control" id="customer" placeholder="Enter Customer">
+    </div>
+    <div class="form-group col-md-3">
+        <label for="department">Department</label>
+        <input type="text" class="form-control" id="department" placeholder="Enter Department">
+    </div>
+    <div class="form-group col-md-3">
+        <label for="pName">Part Name</label>
+        <input type="text" class="form-control" id="pName" placeholder="Enter PartName">
+    </div>
+    <div class="form-group col-md-3">
+        <label for="wOrderNo">Work Order Number</label>
+        <input type="text" class="form-control" id="wOrderNo" placeholder="Enter Work Order No">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-4">
+        <label for="drag">Drg/Dev.No</label>
+        <input type="text" class="form-control" id="drag" placeholder="Enter Drg/Dev.No">
+    </div>
+    <div class="form-group col-md-4">
+        <label for="date">Date</label>
+        <input type="date" class="form-control" id="date" placeholder="Enter Date">
+    </div>
+    <div class="form-group col-md-4">
+        <label for="material">Material</label>
+        <input type="text" class="form-control" id="material" placeholder="Enter Material">
+    </div>
+</div>
+<div class="float-right">
+  <button class="btn btn-primary btn-sm" (click)="items.push({})">Add</button>
+</div>
+<div class="clearfix"></div>
+<div class="table-responsive-md mt-3">
+  <table class="table table-hover table-sm table-bordered text-center">
+    <thead>
+        <tr>
+            <th scope="col" rowspan="2" >Sl. NO</th>
+            <th scope="col" rowspan="2">Drg Dimension</th>
+            <th scope="col" rowspan="2">Instrument Used</th>
+            <th scope="col" rowspan="2">M/C Start Time</th>
+            <th scope="col" colspan="5">Actuals Readings</th>
+            <th scope="col" rowspan="2">Remarks</th>
+            <th scope="col" rowspan="2">QC</th>
+            <th scope="col" rowspan="2">Action</th>
+        </tr>
+        <tr>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+                <input type="button" class="btn btn-danger btn-sm" value="Remove" (click)="items.splice(items.indexOf(item),1)" />
+            </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-4">
+        <label for="remarks">Remarks</label>
+        <input type="text" class="form-control" id="remarks" placeholder="Enter Remarks">
+    </div>
+</div>
+<div>
+    <p><span class="font-weight-bold">Note :</span>  All Dimentions are in mm</p>
+    <p><span class="font-weight-bold">DVC :</span> Digital Vernier Caliper , 
+    <span class="font-weight-bold">DM :</span> Digital Micrometer,
+    <span class="font-weight-bold">TG :</span> Thread Gauge,
+    <span class="font-weight-bold">PP :</span> Profile Projector, 
+    <span class="font-weight-bold">PG :</span> Pin Gauge,
+    <span class="font-weight-bold">RG :</span> Radius Gauge,
+    <span class="font-weight-bold">TMM :</span> Tool Makers Micro Plan
+    </p>
+   
+</div>
+<div class="d-flex justify-content-around">
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input"  (change) = "loginCheck()" id="customCheck3">
+        <label class="custom-control-label" for="customCheck3">Checked By</label>
+    </div>
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input"  (change) = "loginCheck()" id="customCheck4">
+        <label class="custom-control-label" for="customCheck4">Verified By</label>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="float-right">
+        <button type="submit" class="btn btn-success">Save</button>  
+</div>

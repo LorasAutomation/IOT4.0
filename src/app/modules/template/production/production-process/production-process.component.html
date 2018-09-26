@@ -1,0 +1,13 @@
+<div class="card-header">
+<tabset type="pills" #productionProcess [justified]="true">
+    <tab heading="Daily Work Report"  [active]="actualRoute == 'injection-moulding-report'" (select)="goToComponent('injection-moulding-report')"></tab>
+    <tab heading="Machine Parameter Setting"  [active]="actualRoute == 'machine-parameter-chart'" (select)="goToComponent('machine-parameter-chart')"></tab>
+    <tab heading="Sampling Report"   [active]="actualRoute == 'sampling-report'" (select)="goToComponent('sampling-report')"></tab>
+    <tab heading="Route Card"   [active]="actualRoute == 'route-card'" (select)="goToComponent('route-card')"></tab>
+  </tabset>
+</div>
+<div class="mt-3">
+    <div class="card card-body">    
+        <router-outlet></router-outlet>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+<div class="form-row">
+    <h5><i class="fa fa-tachometer-alt"></i>&nbsp;&nbsp;&nbsp;Dashboard </h5>
+</div>
+<hr>
+<div class="row">
+  <div class="mt-1 col-xs-12 col-sm-6 col-md-3">
+    <div class="card shadow ">
+      <div class="card-body color1 text-dark">
+        <div class=" row">
+          <div class="col summaryIcon">
+            <i class="fas fa-chart-bar fa-3x"></i>
+          </div>
+          <div class="col">
+            <h5 class="card-title mb-0 font-weight-bold float-right text-white">
+              78 %
+            </h5>
+            <div class="clearfix"></div>
+            <span class="card-text float-right mt-1 label">Availablity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-1 col-xs-12 col-sm-6 col-md-3">
+    <div class="card shadow ">
+      <div class="card-body color2 text-dark">
+        <div class=" row">
+          <div class="col summaryIcon">
+            <i class="fas fa-cog fa-3x"></i>
+          </div>
+          <div class="col">
+            <h5 class="card-title font-weight-bold mb-0 float-right text-white">
+              89 %
+            </h5>
+            <div class="clearfix"></div>
+            <span class="card-text float-right mt-1 label">Oee</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-1 col-xs-12 col-sm-6 col-md-3">
+    <div class="card shadow ">
+      <div class="card-body color3 text-dark">
+        <div class=" row">
+          <div class="col summaryIcon">
+            <i class="fas fa-industry fa-3x"></i>
+          </div>
+          <div class="col">
+            <h5 class="card-title font-weight-bold mb-0 float-right text-white">
+              73 %
+            </h5>
+            <div class="clearfix"></div>
+            <span class="card-text float-right mt-1 label">Performance</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-1 col-xs-12 col-sm-6 col-md-3">
+    <div class="card shadow">
+      <div class="card-body color4 text-dark">
+        <div class=" row">
+          <div class="col summaryIcon">
+            <i class="fas fa-chart-pie fa-3x"></i>
+          </div>
+          <div class="col">
+            <h5 class="card-title font-weight-bold mb-0 float-right text-white">
+              78 %
+            </h5>
+            <div class="clearfix"></div>
+            <span class="card-text float-right mt-1 label">Quality</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card  col-md-6 mt-4">
+    <div class="card-body shadow text-dark">
+        <div  class="card-title">
+          <h5>
+          Availablity
+        </h5>
+      </div>
+      <div style="display: block">
+        <canvas  baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
+          [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="card  col-md-6 mt-4">
+      <div class="card-body shadow text-dark">
+          <h5 class="card-title">
+            Performance
+          </h5>
+        <div style="display: block">
+            <canvas baseChart 
+            [datasets]="lineChartData"
+            [labels]="lineChartLabels"
+            [options]="lineChartOptions"
+            [colors]="lineChartColors"
+            [legend]="lineChartLegend"
+            [chartType]="lineChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+        </div>
+      </div>
+    </div>
+
+  
+</div>

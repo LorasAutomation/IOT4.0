@@ -1,0 +1,16 @@
+<nav class="navbar navbar-dark fixed-top flex-md-nowrap p-0 shadow sidenav-background-color">
+     <a class="width30" (click)="this.globalService.toggleSideNav()">
+     	<span class="side-nav-icons">
+	     	<span  *ngIf="!this.globalService.sideNavOpen"><span class="fas fa-bars"></span></span>
+	     	<span  *ngIf="this.globalService.sideNavOpen"><span class="fas fa-times"></span></span>
+     	</span>
+     	<img class="ml-2" src="{{this.globalService.logoUrl}}" alt="" height="40">
+     </a>
+     <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
+      
+     <ul class="navbar-nav list-inline" style="margin-left: -3%;">
+       <li class=" list-inline-item nav-item text-nowrap text-dark">
+         <button type="button" class="btn btn-primary signoutMargin" (click)="logout()">Sign out</button>
+       </li>
+     </ul>
+</nav>

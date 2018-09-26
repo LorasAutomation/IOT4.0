@@ -1,0 +1,128 @@
+<h5><i class="fas fa-laptop"></i>&nbsp;&nbsp;CNC- Machine Cam Sheet</h5>
+<div class="btn-group mt-3">
+        <label class="btn btn-info btn-sm" [(ngModel)]="shiftModel"
+               btnRadio="shift1" tabindex="0" role="button" name="shift">Shift 1</label>
+        <label class="btn btn-info btn-sm" [(ngModel)]="shiftModel"
+               btnRadio="shift2" tabindex="0" role="button" name="shift">Shift 2</label>
+        <label class="btn btn-info btn-sm" [(ngModel)]="shiftModel"
+               btnRadio="shift3" tabindex="0" role="button" name="shift">Shift 3</label>
+</div>
+<div class="form-row mt-2">
+    <div class="form-group col-md-4">
+        <label for="date">Date</label>
+        <input type="date" class="form-control" id="date" placeholder="Enter Date">
+    </div>
+    <div class="form-group col-md-4">
+        <label for="wONo">WO No</label>
+        <input type="text" class="form-control" id="wONo" placeholder="Enter WO No">
+    </div>
+    <div class="form-group col-md-4">
+        <label for="pTime">Part Time</label>
+        <input type="text" class="form-control" id="pTime" placeholder="Enter Part Time">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-4">
+        <label for="qantity">Qantity</label>
+        <input type="number" class="form-control" id="qantity" placeholder="Enter Quantity">
+    </div>
+    <div class="form-group col-md-4">
+        <label for="qantity">X0 Y0</label>
+        <input type="number" class="form-control" id="qantity" placeholder="Enter Quantity">
+    </div>
+    <div class="form-group col-md-4">
+        <label for="qantity">Z0</label>
+        <input type="number" class="form-control" id="qantity" placeholder="Enter Quantity">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-4">
+        <label for="qantity">Max Height</label>
+        <input type="number" class="form-control" id="qantity" placeholder="Enter Quantity">
+    </div>
+    <div class="form-group col-md-4">
+        <label for="qantity">X+</label>
+        <input type="number" class="form-control" id="qantity" placeholder="Enter Quantity">
+    </div>
+    <div class="form-group col-md-4">
+        <label for="qantity">Y+</label>
+        <input type="number" class="form-control" id="qantity" placeholder="Enter Quantity">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-4">
+        <label for="qantity">X-</label>
+        <input type="number" class="form-control" id="qantity" placeholder="Enter Quantity">
+    </div>
+    <div class="form-group col-md-4">
+        <label for="qantity">Y-</label>
+        <input type="number" class="form-control" id="qantity" placeholder="Enter Quantity">
+    </div>
+</div>
+<div class="float-right">
+        <button class="btn btn-primary btn-sm" (click)="items.push({})">Add</button>
+      </div>
+<div class="clearfix"></div>
+<div class="table-responsive-md mt-3">
+  <table class="table table-hover table-sm table-bordered text-center">
+    <thead>
+        <tr>
+            <th scope="col">Sl. NO</th>
+            <th scope="col">Program Name</th>
+            <th scope="col">Tool Name</th>
+            <th scope="col" >Tool Length</th>
+            <th scope="col">Baby Chuck</th>
+            <th scope="col">Opreator</th>
+            <th scope="col">Opreation</th>
+            <th scope="col">Time HR/M</th>
+            <th scope="col">Remarks</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+                <input type="button" class="btn btn-danger btn-sm" value="Remove" (click)="items.splice(items.indexOf(item),1)" />
+            </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="form-row float-right">
+    <div class="form-group">
+      <label for="programmer">Programmer</label>
+      <input type="text" class="form-control" id="programmer" placeholder="Enter programmer">
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="float-right">
+        <button type="submit" class="btn btn-success">Save</button>  
+</div>
+       

@@ -1,0 +1,111 @@
+.sidebar {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  background-color: dimgray;
+  color: white;
+  height: calc(100vh - 25px);
+}
+
+.sidebar-sticky {
+  position: fixed;
+  top: 50px;
+  /* height: calc(100vh - 48px); */
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #999;
+}
+
+.active-sideNav {
+  color: #FFEB3B;
+  text-shadow: 1px 1px black;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+.select2Font{
+	font-size: .75em;
+}
+
+.menu-padding{
+	padding: .5em;
+}
+
+#myAccordin .accordinClass .card-header{
+    all: unset;
+    padding: 0px;
+    background-color: transparent;
+    border-bottom: 0px;
+}
+
+#myAccordin .accordinClass .card{
+	all: unset;
+	background-color: transparent;
+	border: 0px;
+}
+
+#myAccordin .accordinClass .card-body{
+	padding: 0;
+	padding-left: 1rem;
+}
+
+#myAccordin .accordinClass .btn{
+	padding:0;
+	padding-top:.25rem;
+	padding-bottom:.25rem;
+}
+
+#myAccordin .accordinClass .btn-link{
+	color:black;
+    font-style: oblique;
+}
+
+.menu-style{
+	margin-left:0.5em;
+	margin-top:1.5em;
+  font-size: 1.2em;
+  font-variant: petite-caps;
+}
+
+.sub-menu-style{
+	margin-left:0.7em;
+	margin-top:0.3em;
+	font-size:0.8em;
+}
+
+.side-nav-select {
+    background-color:  transparent !important;
+    border:  none !important;
+    box-shadow: none !important;
+    font-weight: bold;
+}
+
+.menu-style:focus{
+	outline: none;
+}
+
+.menu-style:hover{
+	cursor: pointer;
+}
+

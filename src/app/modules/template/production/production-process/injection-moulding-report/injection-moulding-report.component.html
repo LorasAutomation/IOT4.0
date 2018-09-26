@@ -1,0 +1,281 @@
+<h5><i class="fas fa-laptop"></i>&nbsp;&nbsp;Daily Work Report Of Injection Moulding</h5>
+<div class="btn-group mt-3">
+        <label class="btn btn-info btn-sm" [(ngModel)]="shiftModel"
+               btnRadio="shift1" tabindex="0" role="button" name="shift">Shift 1</label>
+        <label class="btn btn-info btn-sm" [(ngModel)]="shiftModel"
+               btnRadio="shift2" tabindex="0" role="button" name="shift">Shift 2</label>
+        <label class="btn btn-info btn-sm" [(ngModel)]="shiftModel"
+               btnRadio="shift3" tabindex="0" role="button" name="shift">Shift 3</label>
+</div>
+<form>
+    <div class="form-row mt-4">
+        <div class="form-group col-md-3">
+            <label for="date">Date</label>
+            <input type="date" class="form-control" id="date" placeholder="Enter the Date">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="operatorName">Operator Name</label>
+            <input type="text" class="form-control" id="operatorName" placeholder="Enter Operator Name">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="zone">Zone Temperatures</label>
+            <input type="text" class="form-control" id="zone" placeholder="Enter Zone Temperatures">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="customer">Customer</label>
+            <input type="text" class="form-control" id="customer" placeholder="Enter Customer Name">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="mName">Machine Name/No</label>
+            <input type="text" class="form-control" id="mName" placeholder="Enter the Machine Name">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="sweight">Shot Weight</label>
+            <input type="text" class="form-control" id="sweight" placeholder="Enter Shot Weight">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="pName">Part Name</label>
+            <input type="text" class="form-control" id="pName" placeholder="Enter Part Name">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="materialName">Material Name & Grade</label>
+            <input type="text" class="form-control" id="materialName" placeholder="Enter Material Name">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="iPressure">Injection Pressure</label>
+            <input type="text" class="form-control" id="iPressure" placeholder="Enter Injection Pressure">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="partNumber">Part Number</label>
+            <input type="text" class="form-control" id="partNumber" placeholder="Enter Part Number">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="color">Color</label>
+            <input type="text" class="form-control" id="color" placeholder="Enter Color">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="injectionSpeed">Injection Speed</label>
+            <input type="text" class="form-control" id="injectionSpeed" placeholder="Enter Injection Speed">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="tWONumber">Tool Work Order Number</label>
+            <input type="text" class="form-control" id="tWONumber" placeholder="Enter Tool Work Order">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="amBatch">RM Batch Code</label>
+            <input type="text" class="form-control" id="amBatch" placeholder="Enter Am Batch Code">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="coolingTime">Cooling Time</label>
+            <input type="text" class="form-control" id="coolingTime" placeholder="Enter Cooling Time">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="nOCavity">No. Of Cavity</label>
+            <input type="text" class="form-control" id="nOCavity" placeholder="Enter No. Of Cavity">
+        </div>
+    </div>
+    <div class="form-row">
+
+        <div class="form-group col-md-3">
+            <label for="pCSWeight">Part Costing Shot Weight</label>
+            <input type="text" class="form-control" id="pCSWeight" placeholder="Enter Part Costing Shot Weight">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="suckBack">Suck Back</label>
+            <input type="text" class="form-control" id="suckBack" placeholder="Enter Suck Back">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="shotWeight">Shot Weight</label>
+            <input type="text" class="form-control" id="shotWeight" placeholder="Enter Shot Weight">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="amConsumed">Am Consumed</label>
+            <input type="text" class="form-control" id="amConsumed" placeholder="Enter Am Consumed">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="injectionTime">Injection Time</label>
+            <input type="text" class="form-control" id="injectionTime" placeholder="Enter Injection Time">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="runnerWeight">Runner Weight</label>
+            <input type="text" class="form-control" id="runnerWeight" placeholder="Enter Runner Weight">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="lumpsWeight">Lumps Weight</label>
+            <input type="text" class="form-control" id="lumpsWeight" placeholder="Enter Lumps Weight">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="pCCTime">Part Costing Cycle Time</label>
+            <input type="text" class="form-control" id="pCCTime" placeholder="Enter Part Costing Cycle Time">
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover table-sm table-bordered text-center">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">Meter Reading</th>
+                    <th scope="col">No. Of Shots</th>
+                    <th scope="col">Quantity Produced</th>
+                    <th scope="col">Quantity Accepted</th>
+                    <th scope="col">Quantity Rejected</th>
+                    <th scope="col">Remarks For Rejections</th>
+                    <th scope="col">Idle Time</th>
+                    <th scope="col">Remarks For Idle Time</th>
+                    <th scope="col">RM batch Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Opening Reading</td>
+                    <td><input type="number" class="form-control" name="meterReading"></td>
+                    <td><input type="number" class="form-control" name="noOfShots"></td>
+                    <td><input type="number" class="form-control" name="qproduced"></td>
+                    <td><input type="number" class="form-control" name="qaccepted"></td>
+                    <td><input type="number" class="form-control" name="qrejected"></td>
+                    <td><input type="text" class="form-control" name="rejremarks"></td>
+                    <td><input type="text" class="form-control" name="idletime"></td>
+                    <td><input type="text" class="form-control" name="idleremarks"></td>
+                    <td><input type="text" class="form-control" name="ambatchcode"></td>
+                </tr>
+                <tr>
+                    <td>06 AM - 07 AM</td>
+                    <td><input type="number" class="form-control" name="meterReading"></td>
+                    <td><input type="number" class="form-control" name="noOfShots"></td>
+                    <td><input type="number" class="form-control" name="qproduced"></td>
+                    <td><input type="number" class="form-control" name="qaccepted"></td>
+                    <td><input type="number" class="form-control" name="qrejected"></td>
+                    <td><input type="text" class="form-control" name="rejremarks"></td>
+                    <td><input type="text" class="form-control" name="idletime"></td>
+                    <td><input type="text" class="form-control" name="idleremarks"></td>
+                    <td><input type="text" class="form-control" name="ambatchcode"></td>
+                </tr>
+                <tr>
+                    <td>07 AM - 08 Am</td>
+                    <td><input type="number" class="form-control" name="meterReading"></td>
+                    <td><input type="number" class="form-control" name="noOfShots"></td>
+                    <td><input type="number" class="form-control" name="qproduced"></td>
+                    <td><input type="number" class="form-control" name="qaccepted"></td>
+                    <td><input type="number" class="form-control" name="qrejected"></td>
+                    <td><input type="text" class="form-control" name="rejremarks"></td>
+                    <td><input type="text" class="form-control" name="idletime"></td>
+                    <td><input type="text" class="form-control" name="idleremarks"></td>
+                    <td><input type="text" class="form-control" name="ambatchcode"></td>
+                </tr>
+                <tr>
+                    <td>08 AM - 09 AM</td>
+                    <td><input type="number" class="form-control" name="meterReading"></td>
+                    <td><input type="number" class="form-control" name="noOfShots"></td>
+                    <td><input type="number" class="form-control" name="qproduced"></td>
+                    <td><input type="number" class="form-control" name="qaccepted"></td>
+                    <td><input type="number" class="form-control" name="qrejected"></td>
+                    <td><input type="text" class="form-control" name="rejremarks"></td>
+                    <td><input type="text" class="form-control" name="idletime"></td>
+                    <td><input type="text" class="form-control" name="idleremarks"></td>
+                    <td><input type="text" class="form-control" name="ambatchcode"></td>
+                </tr>
+                <tr>
+                    <td>09 AM - 10 AM</td>
+                    <td><input type="number" class="form-control" name="meterReading"></td>
+                    <td><input type="number" class="form-control" name="noOfShots"></td>
+                    <td><input type="number" class="form-control" name="qproduced"></td>
+                    <td><input type="number" class="form-control" name="qaccepted"></td>
+                    <td><input type="number" class="form-control" name="qrejected"></td>
+                    <td><input type="text" class="form-control" name="rejremarks"></td>
+                    <td><input type="text" class="form-control" name="idletime"></td>
+                    <td><input type="text" class="form-control" name="idleremarks"></td>
+                    <td><input type="text" class="form-control" name="ambatchcode"></td>
+                </tr>
+                <tr>
+                    <td>10 AM - 11 AM</td>
+                    <td><input type="number" class="form-control" name="meterReading"></td>
+                    <td><input type="number" class="form-control" name="noOfShots"></td>
+                    <td><input type="number" class="form-control" name="qproduced"></td>
+                    <td><input type="number" class="form-control" name="qaccepted"></td>
+                    <td><input type="number" class="form-control" name="qrejected"></td>
+                    <td><input type="text" class="form-control" name="rejremarks"></td>
+                    <td><input type="text" class="form-control" name="idletime"></td>
+                    <td><input type="text" class="form-control" name="idleremarks"></td>
+                    <td><input type="text" class="form-control" name="ambatchcode"></td>
+                </tr>
+                <tr>
+                    <td>11 AM - 12 AM</td>
+                    <td><input type="number" class="form-control" name="meterReading"></td>
+                    <td><input type="number" class="form-control" name="noOfShots"></td>
+                    <td><input type="number" class="form-control" name="qproduced"></td>
+                    <td><input type="number" class="form-control" name="qaccepted"></td>
+                    <td><input type="number" class="form-control" name="qrejected"></td>
+                    <td><input type="text" class="form-control" name="rejremarks"></td>
+                    <td><input type="text" class="form-control" name="idletime"></td>
+                    <td><input type="text" class="form-control" name="idleremarks"></td>
+                    <td><input type="text" class="form-control" name="ambatchcode"></td>
+                </tr>
+                <tr>
+                    <td>12 PM - 01 PM</td>
+                    <td><input type="number" class="form-control" name="meterReading"></td>
+                    <td><input type="number" class="form-control" name="noOfShots"></td>
+                    <td><input type="number" class="form-control" name="qproduced"></td>
+                    <td><input type="number" class="form-control" name="qaccepted"></td>
+                    <td><input type="number" class="form-control" name="qrejected"></td>
+                    <td><input type="text" class="form-control" name="rejremarks"></td>
+                    <td><input type="text" class="form-control" name="idletime"></td>
+                    <td><input type="text" class="form-control" name="idleremarks"></td>
+                    <td><input type="text" class="form-control" name="ambatchcode"></td>
+                </tr>
+                <tr>
+                    <td>01 PM - 02 PM</td>
+                    <td><input type="number" class="form-control" name="meterReading"></td>
+                    <td><input type="number" class="form-control" name="noOfShots"></td>
+                    <td><input type="number" class="form-control" name="qproduced"></td>
+                    <td><input type="number" class="form-control" name="qaccepted"></td>
+                    <td><input type="number" class="form-control" name="qrejected"></td>
+                    <td><input type="text" class="form-control" name="rejremarks"></td>
+                    <td><input type="text" class="form-control" name="idletime"></td>
+                    <td><input type="text" class="form-control" name="idleremarks"></td>
+                    <td><input type="text" class="form-control" name="ambatchcode"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Total</td>
+                    <td><input type="number" class="form-control" name="totalnoOfShots"></td>
+                    <td><input type="number" class="form-control" name="totalqproduced"></td>
+                    <td><input type="number" class="form-control" name="totalqaccepted"></td>
+                    <td><input type="number" class="form-control" name="totalqrejected"></td>
+                    <td><input type="text" class="form-control" name="totalrejremarks"></td>
+                    <td><input type="text" class="form-control" name="totalidletime"></td>
+                    <td><input type="text" class="form-control" name="totalidleremarks"></td>
+                    <td><input type="text" class="form-control" name="totalambatchcode"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="form-group row d-flex justify-content-around">
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input"  (change) = "loginCheck()" id="customCheck1">
+            <label class="custom-control-label" for="customCheck1">Operator Sign</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input"  (change) = "loginCheck()" id="customCheck2">
+            <label class="custom-control-label" for="customCheck2">Shift Incharge Sign</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input"   (change) = "loginCheck()" id="customCheck3">
+            <label class="custom-control-label" for="customCheck3">Online Inpector Sign</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input"  (change) = "loginCheck()" id="customCheck4">
+            <label class="custom-control-label" for="customCheck4">Production Sign</label>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="float-right">
+            <button type="submit" class="btn btn-success">Save</button>  
+    </div>
+</form>

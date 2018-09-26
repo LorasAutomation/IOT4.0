@@ -1,0 +1,96 @@
+<h5><i class="fas fa-laptop"></i>&nbsp;&nbsp;CNC Machine Daily Work Report</h5>
+<div class="btn-group mt-3">
+        <label class="btn btn-info btn-sm" [(ngModel)]="shiftModel"
+               btnRadio="shift1" tabindex="0" role="button" name="shift">Shift 1</label>
+        <label class="btn btn-info btn-sm" [(ngModel)]="shiftModel"
+               btnRadio="shift2" tabindex="0" role="button" name="shift">Shift 2</label>
+        <label class="btn btn-info btn-sm" [(ngModel)]="shiftModel"
+               btnRadio="shift3" tabindex="0" role="button" name="shift">Shift 3</label>
+</div>
+<div class="clearfix"></div>
+<div class="float-right">
+        <button class="btn btn-primary btn-sm" (click)="items.push({})">Add</button>
+      </div>
+<div class="clearfix"></div>
+<div class="table-responsive-md  mt-3">
+  <table class="table table-hover table-sm table-bordered text-center">
+    <thead>
+        <tr>
+            <th scope="col">W/O NO</th>
+            <th scope="col">Part Name</th>
+            <th scope="col">Program Hrs</th>
+            <th scope="col">M/C Start Time</th>
+            <th scope="col">M/C End Time</th>
+            <th scope="col">Job Setting Time</th>
+            <th scope="col">M/C Running HRS</th>
+            <th scope="col">M/C Idle Time From</th>
+            <th scope="col">M/C Idle Time From</th>
+            <th scope="col">Remarks</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let item of items">
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+              <input type="text" class="form-control" />
+          </td>
+          <td>
+                <input type="button" class="btn btn-danger btn-sm" value="Remove" (click)="items.splice(items.indexOf(item),1)" />
+            </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-4">
+            <label for="opName">Operator Name</label>
+            <input type="text" class="form-control" id="opName" value="Lohith" disabled placeholder="Enter Total HRS">
+    </div>
+    <div class="form-group col-md-4"></div>
+    <div class="form-group col-md-4">
+        <label for="totalHrs">Total HRS</label>
+        <input type="text" class="form-control" id="totalHrs" placeholder="Enter Total HRS">
+    </div>
+</div>
+
+<div class="d-flex justify-content-around">
+        <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck3"  (change) = "loginCheck()">
+                <label class="custom-control-label" for="customCheck3">Operator Sign</label>
+            </div>
+        <div class="custom-control custom-checkbox" >
+            <input type="checkbox" class="custom-control-input" (change) = "loginCheck()" id="customCheck4">
+            <label class="custom-control-label" for="customCheck4">In charge Sign</label>
+        </div>
+    </div>
+<div class="clearfix"></div>
+<div class="float-right mt-3">
+        <button type="submit" class="btn btn-success">Save</button>  
+</div>

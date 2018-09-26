@@ -1,0 +1,30 @@
+<nav class="sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+            
+              <li>
+              <accordion id="myAccordin">
+				  <accordion-group *ngFor="let menu of this.templateService.displayMenu" class="accordinClass">
+				  	<div accordion-heading class="clearfix menu-style" [routerLink]="menu.route" (click) = menuClicked(menu) routerLinkActive="active-sideNav">
+				     <span class="{{menu.icon}}"></span>
+				       <span style="margin-left:0.5em" [hidden]="!this.globalService.sideNavOpen" [@enterAnimation]>{{menu.name}}</span>
+						<span  *ngIf="menu.hasSubMenu && this.globalService.sideNavOpen" >
+				       	<span class="float-right" style="margin-right:6%">
+				       	<span *ngIf="menu.isExpanded" ><i aria-hidden="true"  class="fas fa-angle-up"></i></span>
+				       	<span *ngIf="!menu.isExpanded" ><i aria-hidden="true"   class="fas fa-angle-down"></i></span>
+				       	</span>
+				       </span>
+				    </div>
+				    <accordion-group *ngFor="let submenu of menu.subMenus" >
+				    <div accordion-heading class="clearfix sub-menu-style" routerLink="{{submenu.route}}" routerLinkActive="active" *ngIf="this.globalService.sideNavOpen" [@enterAnimation]>
+				      <span class="{{submenu.icon}}"></span>
+				      <span style="margin-left:1em">{{submenu.name}}</span>
+				    </div>
+						</accordion-group>
+				  </accordion-group>
+				</accordion>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    

@@ -1,0 +1,54 @@
+<div class="form-row">
+    <div class="col-md-8">
+      <h5><i class="fa fa-cogs "></i>&nbsp;&nbsp;&nbsp;Injection Moulding List </h5>
+    </div> 
+    <div class=" form-group">
+        <input type="button" class="btn btn-primary btn-sm" routerLink="/production/new-production" value="New Production">
+    </div>&nbsp;&nbsp;&nbsp;
+    <div class=" form-group">
+        <button class="btn btn-secondary btn-sm">Edit</button>
+    </div>&nbsp;&nbsp;&nbsp;
+    <div class=" form-group">
+        <input  class="form-control"  type="search" placeholder="Search" aria-label="Search">
+    </div>
+</div>
+<hr>
+<div class="table-responsive">
+    <table class="table table-hover table-sm table-bordered text-center">
+        <thead class="thead-light">
+      <tr>
+        <th scope="col">Sl. No</th>
+        <th scope="col">Part Name</th>
+        <th scope="col">Machine Number</th>
+        <th scope="col">Shift</th>
+        <th scope="col">Date</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Part1</td>
+          <td>Machine1</td>
+          <td>Shift1</td>
+          <td>23-08-2018</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Part2</td>
+          <td>Machine2</td>
+          <td>Shift2</td>
+          <td>23-08-2018</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Part3</td>
+          <td>Machine2</td>
+          <td>Shift3</td>
+          <td>23-08-2018</td>
+        </tr>
+    </tbody>
+    </table>
+    <div class="col-xs-12 float-right">
+      <pagination [totalItems]="55"></pagination>
+    </div>
+  </div>

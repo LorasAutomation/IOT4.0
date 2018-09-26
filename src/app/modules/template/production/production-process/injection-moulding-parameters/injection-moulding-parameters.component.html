@@ -1,0 +1,842 @@
+<h5><i class="fas fa-laptop"></i>&nbsp;&nbsp;Injection Moulding M/C Parameter Setting Chart</h5>
+<div class="btn-group mt-3">
+        <label class="btn btn-info btn-sm" [(ngModel)]="shiftModel"
+               btnRadio="shift1" tabindex="0" role="button" name="shift">Shift 1</label>
+        <label class="btn btn-info btn-sm" [(ngModel)]="shiftModel"
+               btnRadio="shift2" tabindex="0" role="button" name="shift">Shift 2</label>
+        <label class="btn btn-info btn-sm" [(ngModel)]="shiftModel"
+               btnRadio="shift3" tabindex="0" role="button" name="shift">Shift 3</label>
+</div>
+<accordion>
+    <div class="row">
+        <div class="col-md-4">
+            <accordion-group heading="Machine Details">
+                <div class="form-row ">
+                    <div class="form-group col-md-6">
+                        <label for="mcNo">M/C No</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="mcNo" name="mcNo" placeholder="Enter M/C No " required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="screwDla">Screw dla</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="screwDla" name="screwDla" placeholder="Enter Screw dla" required>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="form-group col-md-6">
+                        <label for="mMHeight">Min Mold Height</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="mMHeight" name="mMHeight" placeholder="Enter Min Mold Height" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="minMoldHeight">Max Mold Height</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="minMoldHeight" name="minMoldHeight" placeholder="Enter Max Mold Height" required>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="form-group col-md-6">
+                        <label for="mShotWt">Max Shot Wt (PS)</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="mShotWt" name="mShotWt" placeholder="Enter Max Shot Wt (PS)" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="mIPressure">Max Inj. Pressure</label>
+                        <input type="email" class="form-control" autocomplete="nope" id="mIPressure" name="mIPressure" placeholder="Enter Max Inj. Pressure" required>
+                    </div>
+                </div>
+            </accordion-group>
+        </div>
+        <div class="col-md-4">
+            <accordion-group heading="Part details">
+                <div class="form-row ">
+                    <div class="form-group col-md-6">
+                        <label for="pName">Part Name</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="pName" name="pName" placeholder="Enter Part Name" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="pNumber">Part Number</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="pNumber" name="pNumber" placeholder="Enter Part Number" required>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="form-group col-md-6">
+                        <label for="cavity">Cavity #</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="cavity" name="cavity" placeholder="Enter Cavity #" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="runner">Runner Wt.</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="runner" name="runner" placeholder="Enter Runner Wt." required>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="form-group col-md-6">
+                        <label for="partWt">Part Wt.</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="partWt" name="partWt" placeholder="Enter Part Wt." required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="shotWt">Shot Wt</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="shotWt" name="shotWt" placeholder="Enter Shot Wt" required>
+                    </div>
+                </div>
+            </accordion-group>
+        </div>
+        <div class="col-md-4">
+            <accordion-group heading="Raw Material Details">
+                <div class="form-row ">
+                    <div class="form-group col-md-6">
+                        <label for="rMName">RM Name</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="rMName" name="rMName" placeholder="Enter RM Name" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="grade">Grade</label>
+                        <input type="email" class="form-control" autocomplete="nope" id="grade" name="grade" placeholder="Enter Grade" required>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="form-group col-md-6">
+                        <label for="color">Color</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="color" name="color" placeholder="Enter Color" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="masterBatch">Master Batch</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="masterBatch" name="masterBatch" placeholder="Enter Master Batch" required>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="form-group col-md-6">
+                        <label for="dryingTemperature">Drying Temperature</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="dryingTemperature" name="dryingTemperature" placeholder="Enter Drying Temperature" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="dryingTime1">Drying time</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="dryingTime1" name="dryingTime" placeholder="Enter Drying time" required>
+                    </div>
+                </div>
+            </accordion-group>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <accordion-group heading="Mold Details">
+                <div class="form-row ">
+                    <div class="form-group col-md-6">
+                        <label for="moldNumber">Mold Number</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="moldNumber" name="moldNumber" placeholder="Enter Mold Number" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="moldType">Mold Type</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="moldType" name="moldType" placeholder="Enter Mold Type" required>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="form-group col-md-6">
+                        <label for="electorType">Elector Type</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="electorType" name="electorType" placeholder="Enter Elector Type" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="maxEjector">Max Ejector Stroke</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="maxEjector" name="maxEjector" placeholder="Enter Max Ejector Stroke" required>
+                    </div>
+                </div>
+            </accordion-group>
+        </div>
+        <div class="col-md-8">
+            <accordion-group heading="Material Data Sheet">
+                <div class="form-row ">
+                    <div class="form-group col-md-4">
+                        <label for="date">Date</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="date" name="date" placeholder="Enter Date" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="meltTemp">Melt Temp</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="meltTemp" name="meltTemp" placeholder="Enter Melt Temp" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="rearTemp">Rear Temp</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="rearTemp" name="rearTemp" placeholder="Enter Rear Temp" required>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="form-group col-md-4">
+                        <label for="shift">Shift</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="shift" name="shift" placeholder="Enter Shift" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="nozzleTemp">Nozzle Temp</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="nozzleTemp" name="nozzleTemp" placeholder="Enter Nozzle Temp" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="dryingTemp">Drying Time</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="dryingTemp" name="dryingTemp" placeholder="Enter Drying Time" required>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="form-group col-md-4">
+                        <label for="CustomerName">Customer Name</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="CustomerName" name="CustomerName" placeholder="Enter Customer Name" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="frontTemp">Front Temp</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="frontTemp" name="frontTemp" placeholder="Enter Front Temp" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="dryingTemp">Drying Temp</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="dryingTemp" name="dryingTemp" placeholder="Enter Drying temp" required>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="form-group col-md-3">
+                        <label for="optimisedBy">Optimised By</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="optimisedBy" name="optimisedBy" placeholder="Enter Drying Temperature" required>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="middleTemp">Middle Temp</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="middleTemp" name="middleTemp" placeholder="Enter Drying time" required>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="moldTemp">Mold Temp</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="moldTemp" name="moldTemp" placeholder="Enter Drying time" required>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="moistureContent">Moisture Content</label>
+                        <input type="text" class="form-control" autocomplete="nope" id="moistureContent" name="moistureContent" placeholder="Enter Drying time" required>
+                    </div>
+                </div>
+            </accordion-group>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <accordion-group heading="Barrel Temperature Settings">
+                <div class="table-responsive">
+                    <table class="table table-hover table-sm table-bordered text-center">
+                        <thead class="thead-light">
+                            <th></th>
+                            <th>Nozzle</th>
+                            <th>Zone 1</th>
+                            <th>Zone 2</th>
+                            <th>Zone 3</th>
+                            <th>Zone 4</th>
+                            <th>Moving Half</th>
+                            <th>Fixed Half</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Set</td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Real</td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tol</td>
+                                <td>&#177;10&#176;C</td>
+                                <td>&#177;10&#176;C</td>
+                                <td>&#177;10&#176;C</td>
+                                <td>&#177;10&#176;C</td>
+                                <td></td>
+                                <td>Tol &#177;10&#176;C</td>
+                                <td>Tol &#177;10&#176;C</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </accordion-group>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <accordion-group heading="Hot Runner Settings">
+                <div class="table-responsive">
+                    <table class="table table-hover table-sm table-bordered text-center">
+                        <thead class="thead-light">
+                            <th></th>
+                            <th>Tip 1</th>
+                            <th>Tip 2</th>
+                            <th>Tip 3</th>
+                            <th>Tip 4</th>
+                            <th>Manifold 1</th>
+                            <th>Manifold 2</th>
+                            <th>Hot Sprue</th>
+                            <th colspan="4"></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Set</td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Act</td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tol</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </accordion-group>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <accordion-group heading="Mold Details">
+                <div class="table-responsive">
+                    <table class="table table-hover table-sm table-bordered text-center">
+                        <thead class="thead-light">
+                            <th></th>
+                            <th>CLS-1</th>
+                            <th>CLS-2</th>
+                            <th>CLS-3</th>
+                            <th>Protect</th>
+                            <th>Hi-Pressure</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Pressure</td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Speed</td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Position</td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mold Sensing Time</td>
+                                <td colspan="2">
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td colspan="2">Tonnage Apply</td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </accordion-group>
+        </div>
+        <div class="col-md-6">
+            <accordion-group heading="Mould Opening">
+                <div class="table-responsive">
+                    <table class="table table-hover table-sm table-bordered text-center">
+                        <thead class="thead-light">
+                            <th>PRS</th>
+                            <th>END S</th>
+                            <th>OPN 4</th>
+                            <th>OPN 3</th>
+                            <th>OPN 2</th>
+                            <th>STRS</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Speed</td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Poson</td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </accordion-group>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <accordion-group heading="Ejection Forward">
+                <div class="table-responsive">
+                    <table class="table table-hover table-sm table-bordered text-center">
+                        <thead class="thead-light">
+                            <th></th>
+                            <th>FWD 1</th>
+                            <th>FWD 2</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Pressure</td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Speed</td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Position</td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </accordion-group>
+        </div>
+        <div class="col-md-6">
+            <accordion-group heading="Ejection Backward">
+                <div class="table-responsive">
+                    <table class="table table-hover table-sm table-bordered text-center">
+                        <thead class="thead-light">
+                            <th></th>
+                            <th>Bwd 1</th>
+                            <th>Bwd 2</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Pressure</td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Speed</td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Position</td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </accordion-group>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <accordion-group heading="Injection Parameters">
+          <div class="col-md-12">
+              <div class="table-responsive">
+                  <table class="table table-hover table-sm table-bordered text-center">
+                      <tbody>
+                          <tr>
+                              <td>Shot Size</td>
+                              <td>
+                                  <input type="text" class="form-control" />
+                              </td>
+                              <td>Tol&#177;1 mm</td>
+                          </tr>
+                          <tr>
+                              <td>Injection Pressure 1</td>
+                              <td>
+                                  <input type="text" class="form-control" />
+                              </td>
+                              <td>Tol&#177;10 Bar</td>
+                          </tr>
+                          <tr>
+                              <td>Injection Pressure 2</td>
+                              <td>
+                                  <input type="text" class="form-control" />
+                              </td>
+                              <td>Tol&#177;10 Bar</td>
+                          </tr>
+                          <tr>
+                              <td>Injection Pressure 3</td>
+                              <td>
+                                  <input type="text" class="form-control" />
+                              </td>
+                              <td>Tol&#177;10 Bar</td>
+                          </tr>
+                          <tr>
+                              <td>Injection Speed </td>
+                              <td>
+                                  <input type="text" class="form-control" />
+                              </td>
+                              <td>Tol&#177;10 M/s</td>
+                          </tr>
+                          <tr>
+                              <td>Injection Speed 1</td>
+                              <td>
+                                  <input type="text" class="form-control" />
+                              </td>
+                              <td>Tol&#177;10 M/s</td>
+                          </tr>
+                          <tr>
+                              <td>Injection Speed 2</td>
+                              <td>
+                                  <input type="text" class="form-control" />
+                              </td>
+                              <td>Tol&#177;10 M/s</td>
+                          </tr>
+                          <tr>
+                              <td>Injection Speed 3</td>
+                              <td>
+                                  <input type="text" class="form-control" />
+                              </td>
+                              <td>Tol&#177;10 M/s</td>
+                          </tr>
+                          <tr>
+                              <td>Injection Time </td>
+                              <td>
+                                  <input type="text" class="form-control" />
+                              </td>
+                              <td>Tol&#177;0.02 M/s</td>
+                          </tr>
+                          <tr>
+                              <td>Cooling Time</td>
+                              <td>
+                                  <input type="text" class="form-control" />
+                              </td>
+                              <td>Tol&#177;2 sec</td>
+                          </tr>
+                          <tr>
+                              <td>Cycle Time</td>
+                              <td>
+                                  <input type="text" class="form-control" />
+                              </td>
+                              <td>Tol&#177;2 sec</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+        </accordion-group>
+      </div>
+      <div class="col-md-6">
+            <accordion-group heading="Injection Parameters - 2">
+              <div class="col-md-12">
+                  <div class="table-responsive">
+                      <table class="table table-hover table-sm table-bordered text-center">
+                          <tbody>
+                              <tr>
+                                  <td>Holding Pressure 1</td>
+                                  <td>
+                                      <input type="text" class="form-control" />
+                                  </td>
+                                  <td>Tol&#177;10 Bar</td>
+                              </tr>
+                              <tr>
+                                  <td>Holding Pressure 2</td>
+                                  <td>
+                                      <input type="text" class="form-control" />
+                                  </td>
+                                  <td>Tol&#177;10 Bar</td>
+                              </tr>
+                              <tr>
+                                  <td>Holding Speed 1</td>
+                                  <td>
+                                      <input type="text" class="form-control" />
+                                  </td>
+                                  <td>Tol&#177;10 M/s</td>
+                              </tr>
+                              <tr>
+                                  <td>Holding Speed 2 </td>
+                                  <td>
+                                      <input type="text" class="form-control" />
+                                  </td>
+                                  <td>Tol&#177;10 M/s</td>
+                              </tr>
+                              <tr>
+                                  <td>Holding Time 1 </td>
+                                  <td>
+                                      <input type="text" class="form-control" />
+                                  </td>
+                                  <td>Tol&#177;0.02 sec</td>
+                              </tr>
+                              <tr>
+                                  <td>Cussion</td>
+                                  <td>
+                                      <input type="text" class="form-control" />
+                                  </td>
+                                  <td>Tol&#177;0.5 MM</td>
+                              </tr>
+                              <tr>
+                                  <td>Back Pressure</td>
+                                  <td>
+                                      <input type="text" class="form-control" />
+                                  </td>
+                                  <td>Tol&#177;5 Bar</td>
+                              </tr>
+                              <tr>
+                                  <td>Decomp</td>
+                                  <td>
+                                      <input type="text" class="form-control" />
+                                  </td>
+                                  <td>Tol&#177;5 Bar</td>
+                              </tr>
+                              <tr>
+                                  <td>Holding Pressure 2</td>
+                                  <td>
+                                      <input type="text" class="form-control" />
+                                  </td>
+                                  <td>Tol&#177;10 Bar</td>
+                              </tr>
+                              <tr>
+                                  <td>Holding Speed 1</td>
+                                  <td>
+                                      <input type="text" class="form-control" />
+                                  </td>
+                                  <td>Tol&#177;10 M/s</td>
+                              </tr>
+                              <tr>
+                                  <td>Holding Speed 2</td>
+                                  <td>
+                                      <input type="text" class="form-control" />
+                                  </td>
+                                  <td>Tol&#177;10 M/s</td>
+                              </tr>
+                              <tr>
+                                  <td>Holding Time 1 </td>
+                                  <td>
+                                      <input type="text" class="form-control" />
+                                  </td>
+                                  <td>Tol&#177;0.02 Sec</td>
+                              </tr>
+                              <tr>
+                                  <td>Cussion</td>
+                                  <td>
+                                      <input type="text" class="form-control" />
+                                  </td>
+                                  <td>Tol&#177;0.5 MM</td>
+                              </tr>
+                              <tr>
+                                  <td>Back Pressure</td>
+                                  <td>
+                                      <input type="text" class="form-control" />
+                                  </td>
+                                  <td>Tol&#177;5 Bar</td>
+                              </tr>
+                              <tr>
+                                  <td>Decomp</td>
+                                  <td>
+                                      <input type="text" class="form-control" />
+                                  </td>
+                                  <td>Tol&#177;5 Bar</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+            </accordion-group>
+          </div>
+    </div>
+</accordion>
+
+<div class="d-flex justify-content-around mt-3">
+        <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input"  (change) = "loginCheck()" id="customCheck3">
+                <label class="custom-control-label" for="customCheck3">Prepared By</label>
+            </div>
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input"  (change) = "loginCheck()" id="customCheck4">
+            <label class="custom-control-label" for="customCheck4">Approved By</label>
+        </div>
+    </div>
+
+<div class="clearfix"></div>
+<div class="float-right mt-3">
+        <button type="submit" class="btn btn-success">Save</button>  
+</div>
