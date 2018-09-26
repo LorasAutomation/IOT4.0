@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "SMCsquared": {
+    "IOT4.0": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/SMCsquared",
+            "outputPath": "dist/IOT4.0",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -52,18 +52,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "SMCsquared:build"
+            "browserTarget": "IOT4.0:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "SMCsquared:build:production"
+              "browserTarget": "IOT4.0:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SMCsquared:build"
+            "browserTarget": "IOT4.0:build"
           }
         },
         "test": {
@@ -97,7 +97,7 @@
         }
       }
     },
-    "SMCsquared-e2e": {
+    "IOT4.0-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -105,11 +105,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "SMCsquared:serve"
+            "devServerTarget": "IOT4.0:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "SMCsquared:serve:production"
+              "devServerTarget": "IOT4.0:serve:production"
             }
           }
         },
@@ -125,5 +125,5 @@
       }
     }
   },
-  "defaultProject": "SMCsquared"
+  "defaultProject": "IOT4.0"
 }

@@ -1,0 +1,7 @@
+/node_modules/
+.settings/org.eclipse.wst.jsdt.ui.superType.container
+.settings/.jsdtscope
+.project
+.settings/org.eclipse.wst.jsdt.ui.superType.name
+.vscode/settings.json
+.package-lock.json
