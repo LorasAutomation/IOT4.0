@@ -52,39 +52,10 @@
 	padding: .5em;
 }
 
-#myAccordin .accordinClass .card-header{
-    all: unset;
-    padding: 0px;
-    background-color: transparent;
-    border-bottom: 0px;
-}
-
-#myAccordin .accordinClass .card{
-	all: unset;
-	background-color: transparent;
-	border: 0px;
-}
-
-#myAccordin .accordinClass .card-body{
-	padding: 0;
-	padding-left: 1rem;
-}
-
-#myAccordin .accordinClass .btn{
-	padding:0;
-	padding-top:.25rem;
-	padding-bottom:.25rem;
-}
-
-#myAccordin .accordinClass .btn-link{
-	color:black;
-    font-style: oblique;
-}
-
 .menu-style{
 	margin-left:0.5em;
 	margin-top:1.5em;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-variant: petite-caps;
 }
 

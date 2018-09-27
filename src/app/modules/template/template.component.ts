@@ -13,8 +13,8 @@ export class TemplateComponent implements OnInit {
   ngOnInit() {
   }
 
-  collapseSideNav(){
-    if(this.globalService.sideNavOpen)
+  collapseSideNav() {
+    if (this.globalService.sideNavOpen)
       this.globalService.sideNavOpen = !this.globalService.sideNavOpen;
   }
 

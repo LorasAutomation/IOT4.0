@@ -11,14 +11,16 @@ export class GlobalService {
   sideNavOpen = true;
   alerts: any[] = [];
   userInfo= new UserBasicInfo();
-  loading = false;
+	loading = false;
+	sideNavHovered=false;
 
   constructor() {
     this.logoUrl = '../../../../assets/Images/logo.png';
   }
 
   toggleSideNav() {
-	  this.sideNavOpen = !this.sideNavOpen;
+		this.sideNavOpen = !this.sideNavOpen;
+		this.sideNavHovered=false;
   }
     
   setUserBasicInfo(empId:string, orgId:string){

@@ -1,18 +1,20 @@
 <app-header></app-header>
 <div class="container-fluid">
-      <div class="row">
-		      <div class="width30 shadow background-navbar col-12 col-sm-12 col-md-12 col-lg-12" [ngStyle]="{'max-width':this.globalService.sideNavOpen?'33%':'5%','text-align':this.globalService.sideNavOpen? 'initial':'center'}">
-		      		<app-sidenav></app-sidenav>
-		      </div>
-	      <div class="fixed-top-margin width70" [ngStyle]="{'max-width':this.globalService.sideNavOpen?'':'95%','width':this.globalService.sideNavOpen?'':'95%'}" (click) = "collapseSideNav()">
+	<div class="row">
+		<div class="width30 shadow background-navbar col-12 col-sm-12 col-md-12 col-lg-12" [ngStyle]="{'max-width':this.globalService.sideNavOpen || this.globalService.sideNavHovered ?'33%':'5%','text-align':this.globalService.sideNavOpen || this.globalService.sideNavHovered? 'initial':'center'}"
+		 (mouseover)="!this.globalService.sideNavOpen?this.globalService.sideNavHovered=true:null">
+			<app-sidenav></app-sidenav>
+		</div>
+		<div class="fixed-top-margin width70" [ngStyle]="{'max-width':this.globalService.sideNavOpen || this.globalService.sideNavHovered?'':'95%','width':this.globalService.sideNavOpen || this.globalService.sideNavHovered?'':'95%'}"
+		 (click)="collapseSideNav()">
 			<div class="container-fluid">
 				<div class="card card-body mt-2">
-					<div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-5">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-5" (mouseover)="!this.globalService.sideNavOpen?this.globalService.sideNavHovered=false:null">
 						<router-outlet></router-outlet>
 					</div>
 				</div>
-			</div>  
+			</div>
 		</div>
-      </div>
- </div>
- <app-footer></app-footer>
+	</div>
+</div>
+<app-footer></app-footer>
