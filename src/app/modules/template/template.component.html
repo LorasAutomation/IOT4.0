@@ -6,10 +6,10 @@
 			<app-sidenav></app-sidenav>
 		</div>
 		<div class="fixed-top-margin width70" [ngStyle]="{'max-width':this.globalService.sideNavOpen || this.globalService.sideNavHovered?'':'95%','width':this.globalService.sideNavOpen || this.globalService.sideNavHovered?'':'95%'}"
-		 (click)="collapseSideNav()">
+		 (click)="collapseSideNav()"  (mouseover)="!this.globalService.sideNavOpen?this.globalService.sideNavHovered=false:null">
 			<div class="container-fluid">
 				<div class="card card-body mt-2">
-					<div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-5" (mouseover)="!this.globalService.sideNavOpen?this.globalService.sideNavHovered=false:null">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-5">
 						<router-outlet></router-outlet>
 					</div>
 				</div>

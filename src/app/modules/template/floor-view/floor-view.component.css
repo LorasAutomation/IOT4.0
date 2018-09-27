@@ -1,0 +1,18 @@
+.status{
+    height: 3px;
+    position: absolute;
+}
+
+.card-header {
+    padding: .5rem .65rem;
+    font-size: .9rem;
+}
+
+.guage-name{
+    font-size: 0.6rem;
+    font-weight: 600;
+}
+
+.machine-online{
+    background-color: lawngreen
+}
