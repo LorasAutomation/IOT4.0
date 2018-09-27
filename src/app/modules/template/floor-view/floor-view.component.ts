@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Line } from '../../models/line';
+import { Machine } from '../../models/machine';
 
 @Component({
   selector: 'app-floor-view',
@@ -9,7 +11,12 @@ export class FloorViewComponent implements OnInit {
 
   constructor() { }
 
+  lineList : Line[] = [];
+  machineList: Machine[] = [];
+
   ngOnInit() {
+    this.lineList = [new Line('Line 1')];
+    this.machineList = [new Machine('Machine 1'), new Machine('Machine 2'), new Machine('Machine 3'), new Machine('Machine 4'), new Machine('Machine 5')];
   }
 
   public doughnutChartLabels:string[] = ['UP', 'DOWN'];

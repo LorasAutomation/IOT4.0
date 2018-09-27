@@ -1,15 +1,36 @@
-export class machine {
+export class Machine {
     name: string;
-    performance: number;
-    oee: number;
-    partsProduced: number;
-    maintainence: number;
+    paramList: Parameter[];
 
-    constructor(name?: string, performance?: number, oee?: number, partsProduced?: number, maintainence?: number){
+    constructor(name?: string, paramList?: Parameter[]){
         this.name= name;
-        this.performance = performance;
-        this.oee= oee;
-        this.partsProduced = partsProduced;
-        this.maintainence = maintainence;
+        this.paramList = paramList;
     }
+}
+
+export class Parameter{
+    name: string;
+    type: ParameterType;
+    value: number | XYValue[] ;
+
+    constructor(name?: string, type?: ParameterType, value?: number | XYValue[]){
+        this.name = name;
+        this.type = type;
+        this.value = value;
+    }
+}
+export class XYValue{
+    x: any;
+    y: any;
+
+    constructor(x?:any,y?:any){
+        this.x = x;
+        this.y = y;
+    }
+}
+
+export enum ParameterType{
+    SUMMARY,
+    BASIC,
+    GUAGE
 }
