@@ -1,12 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { GlobalService } from '../../services/global.service';
 import { trigger, style, animate, transition } from '@angular/animations';
-import { Menu } from './model/menu';
-import {
-  faCoffee, faStickyNote, faUserCog, faPaperPlane, faFileAlt, faUsers,
-  faChartLine, faCalendarAlt, faListUl, faPlusSquare, faAngleUp
-} from '@fortawesome/fontawesome-free-solid';
-import fontawesome from '@fortawesome/fontawesome';
 import { TemplateService } from '../../services/template.service';
 
 @Component({
@@ -34,8 +28,6 @@ export class SidenavComponent implements OnInit {
   constructor(public globalService: GlobalService, public templateService: TemplateService) { }
 
   ngOnInit() {
-    fontawesome.library.add(faCoffee, faStickyNote, faUserCog, faPaperPlane, faFileAlt, faUsers,
-      faChartLine, faCalendarAlt, faListUl, faPlusSquare, faAngleUp);
   }
 
   menuClicked(menu) {

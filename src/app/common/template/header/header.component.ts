@@ -2,8 +2,6 @@ import { AuthService } from '../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GlobalService } from '../../services/global.service';
-import { faBars, faTimes } from '@fortawesome/fontawesome-free-solid';
-import fontawesome from '@fortawesome/fontawesome';
 import { TemplateService } from '../../services/template.service';
 
 @Component({
@@ -19,7 +17,6 @@ export class HeaderComponent implements OnInit {
   public globalService: GlobalService, public templateService:TemplateService ) { }
 
   ngOnInit() {
-    fontawesome.library.add(faBars, faTimes);
   }
 
   logout() {

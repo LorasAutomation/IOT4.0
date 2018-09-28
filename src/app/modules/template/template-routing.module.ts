@@ -9,7 +9,7 @@ const routes: Routes = [
       {
         path: '',
         children: [
-           { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+           { path: '', redirectTo: 'floor-view', pathMatch: 'full'},
            { path: 'production', loadChildren: './production/production.module#ProductionModule' },
            { path: 'cnc', loadChildren: './cnc/cnc.module#CncModule' },
            { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },

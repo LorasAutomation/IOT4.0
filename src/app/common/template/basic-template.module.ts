@@ -10,19 +10,18 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   declarations:[ 
-  HeaderComponent, 
-  FooterComponent, 
-  SidenavComponent 
+  HeaderComponent,  
+   FooterComponent, 
+  SidenavComponent  
   ],
   imports:[ 
   	CommonModule, 
   	RouterModule, 
-    AccordionModule.forRoot(),
     FormsModule
     ],
   exports:[ 
-  	HeaderComponent, 
-  	FooterComponent, 
+  	HeaderComponent,  
+  	FooterComponent,
   	SidenavComponent 
   	]
 })
