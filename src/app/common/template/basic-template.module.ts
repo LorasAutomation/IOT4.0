@@ -7,23 +7,25 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { BsDropdownModule } from 'ngx-bootstrap';
 
 @NgModule({
-  declarations:[ 
-  HeaderComponent,  
-   FooterComponent, 
-  SidenavComponent  
+  declarations: [
+    HeaderComponent,
+    FooterComponent,
+    SidenavComponent
   ],
-  imports:[ 
-  	CommonModule, 
-  	RouterModule, 
-    FormsModule
-    ],
-  exports:[ 
-  	HeaderComponent,  
-  	FooterComponent,
-  	SidenavComponent 
-  	]
+  imports: [
+    CommonModule,
+    RouterModule,
+    FormsModule,
+    BsDropdownModule.forRoot()
+  ],
+  exports: [
+    HeaderComponent,
+    FooterComponent,
+    SidenavComponent
+  ]
 })
 
-export class BasicTemplateModule {}
+export class BasicTemplateModule { }

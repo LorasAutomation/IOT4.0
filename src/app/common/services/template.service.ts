@@ -14,22 +14,26 @@ import { faBars, faTimes } from '@fortawesome/fontawesome-free-solid';
 export class TemplateService {
 
   displayMenu: Menu[] = [];
-  
-  constructor(private router: Router, private activatedRoute:ActivatedRoute) { 
-    fontawesome.library.add(faBars, faTimes,faCoffee, faStickyNote, faUserCog, faPaperPlane, faFileAlt, faUsers,
+
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+    fontawesome.library.add(faBars, faTimes, faCoffee, faStickyNote, faUserCog, faPaperPlane, faFileAlt, faUsers,
       faChartLine, faCalendarAlt, faListUl, faPlusSquare, faAngleUp);
   }
-  
-  refreshTheView(){
-    this.getAllMenuData();	
+
+  refreshTheView() {
+    this.getAllMenuData();
   }
-  
-  getAllMenuData(){
+
+  getAllMenuData() {
     this.displayMenu = [
       new Menu('Dashboard', 'fas fa-tachometer-alt', false, [], '/dashboard', false),
       new Menu('Floor View', 'fas fa-th-list', false, [], '/floor-view', false),
       new Menu('Injection Moulding', 'fas fa-cogs', false, [], '/production', false),
-      new Menu('Cnc', 'fas fa-tablet-alt', false, [], '/cnc', false)
+      new Menu('Cnc', 'fas fa-tablet-alt', false, [], '/cnc', false),
+      new Menu('Setting', 'fas fa-wrench', true, [
+        new Menu('Alert', 'fas fa-bell', false, [], './setting/alert', false),
+        new Menu('Maintenance', 'fas fa-wrench', false, [], './setting/maintenance', false)],
+        './setting', false)
     ];
   }
 }

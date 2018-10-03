@@ -1,24 +1,22 @@
 <nav class="sidebar">
 	<div class="sidebar-sticky">
 		<ul class="nav flex-column accordinClass" *ngFor="let menu of this.templateService.displayMenu">
-			<span *ngIf="!(menu.hasSubMenu && this.globalService.sideNavOpen)">
+			<span *ngIf="!(menu.hasSubMenu && (this.globalService.sideNavOpen || this.globalService.sideNavHovered))">
 				<li class="clearfix menu-style" [ngStyle]="{'margin-left': this.globalService.sideNavOpen? '1em':'1em'}" [routerLink]="menu.route"
 				 (click)=menuClicked(menu) routerLinkActive="active-sideNav">
 					<span class="{{menu.icon}}"></span>
-					<span style="margin-left:0.5em" [hidden]="!this.globalService.sideNavOpen" [@enterAnimation]>{{menu.name}}</span>
-					<span style="margin-left:0.5em" [hidden]="!this.globalService.sideNavHovered" [@enterAnimation]>{{menu.name}}</span>
+					<span style="margin-left:0.5em" [hidden]="!this.globalService.sideNavOpen &&  !this.globalService.sideNavHovered" [@enterAnimation]>{{menu.name}}</span>
 				</li>
 			</span>
-			<li class="clearfix menu-style" *ngIf="menu.hasSubMenu && this.globalService.sideNavOpen" [ngStyle]="{'margin-left': this.globalService.sideNavOpen? '1em':'1em'}"
-			 dropdown container="body" routerLinkActive="active">
+			<li class="clearfix menu-style" *ngIf="menu.hasSubMenu && (this.globalService.sideNavOpen || this.globalService.sideNavHovered)"
+			 [ngStyle]="{'margin-left': this.globalService.sideNavOpen? '1em':'1em'}" dropdown container="body" routerLinkActive="active-sideNav">
 				<span dropdownToggle class="" aria-controls="dropdown-basic">
 					<span class="{{menu.icon}}"></span>
-					<span style="margin-left:0.5em" [hidden]="!this.globalService.sideNavOpen" [@enterAnimation]>{{menu.name}}</span>&nbsp;
-					<span style="margin-left:0.5em" [hidden]="!this.globalService.sideNavHovered" [@enterAnimation]>{{menu.name}}</span>
+					<span style="margin-left:0.5em" [hidden]="!this.globalService.sideNavOpen  &&  !this.globalService.sideNavHovered" [@enterAnimation]>{{menu.name}}</span>&nbsp;
 					<span class="fas fa-caret-right"></span>
 				</span>
 				<ul id="dropdown-nested" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-nested">
-					<li role="menuitem" class="clearfix sub-menu-style" routerLink="{{submenu.route}}" routerLinkActive="active" *ngFor="let submenu of menu.subMenus">
+					<li role="menuitem" class="clearfix sub-menu-style" (click)="navigate(submenu.route)" [routerLink]="submenu.route" *ngFor="let submenu of menu.subMenus">
 						<span class="{{submenu.icon}}"></span>
 						<span style="margin-left:1em">{{submenu.name}}</span></li>
 				</ul>

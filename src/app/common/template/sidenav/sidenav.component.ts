@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { GlobalService } from '../../services/global.service';
 import { trigger, style, animate, transition } from '@angular/animations';
 import { TemplateService } from '../../services/template.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidenav',
@@ -25,7 +26,7 @@ import { TemplateService } from '../../services/template.service';
 })
 export class SidenavComponent implements OnInit {
 
-  constructor(public globalService: GlobalService, public templateService: TemplateService) { }
+  constructor(public globalService: GlobalService, public templateService: TemplateService, private route: Router) { }
 
   ngOnInit() {
   }
@@ -34,6 +35,10 @@ export class SidenavComponent implements OnInit {
     if (menu.hasSubMenu) {
       menu.isExpanded = !menu.isExpanded;
     }
+  }
+
+  navigate(data) {
+    this.route.navigate([data]);
   }
 
 }
