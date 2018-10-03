@@ -1,0 +1,76 @@
+<div class="form-row">
+  <div class="col-md-8">
+    <h5><i class="fas fa-bell"></i>&nbsp;&nbsp;&nbsp;Add Alert</h5>
+  </div>
+</div>
+<hr>
+<div class="form-row mt-2">
+  <div class="form-group col-md-4">
+    <label for="date">Select Machine</label>
+    <select class="custom-select">
+      <option selected>Select</option>
+      <option value="1">Machine 1</option>
+      <option value="2">Machine 2</option>
+      <option value="3">Machine 3</option>
+    </select>
+  </div>
+  <div class="form-group col-md-4">
+    <label for="date">Select Parameter</label>
+    <select class="custom-select">
+      <option selected>Select</option>
+      <option value="1">Param 1</option>
+      <option value="2">Param 2</option>
+      <option value="3">Param 3</option>
+    </select>
+  </div>
+  <div class="form-group col-md-4">
+    <label for="date">Select Operator</label>
+    <select class="custom-select" [(ngModel)]="operator">
+      <option selected value='undefined'>Select</option>
+      <option value="1">Equal</option>
+      <option value="2">Less then</option>
+      <option value="3">Greater Then</option>
+      <option value="4">Beyond Range</option>
+    </select>
+  </div>
+</div>
+<div class="form-row">
+  <div class="form-group col-md-3">
+    <label for="date">Lower Limit</label>
+    <input type="number" class="form-control" placeholder="Lower Limit">
+  </div>
+  <div class="form-group col-md-3" *ngIf="operator == 4">
+    <label for="date">Upper Limit</label>
+    <input type="number" class="form-control" placeholder="Upper Limit">
+  </div>
+  <div class="form-group col-md-2 offset-md-1">
+    <div class="custom-control custom-checkbox mt-4">
+      <input type="checkbox" class="custom-control-input" id="customCheck1" [(ngModel)]="sms">
+      <label class="custom-control-label" for="customCheck1">SMS</label>
+    </div>
+  </div>
+  <div class="form-group col-md-1">
+    <div class="custom-control custom-checkbox mt-4">
+      <input type="checkbox" class="custom-control-input" id="customCheck2" [(ngModel)]="email">
+      <label class="custom-control-label" for="customCheck2">Email</label>
+    </div>
+  </div>
+</div>
+<div class="form-row">
+  <div class="form-group col-md-4">
+    <label for="date">Phone Number</label>
+    <input type="number" class="form-control" placeholder="Phone Number" [disabled]="!sms">
+  </div>
+  <div class="form-group col-md-4">
+    <label for="date">Email</label>
+    <input type="email" class="form-control" placeholder="Email" [disabled]="!email">
+  </div>
+  <div class="form-group col-md-4">
+    <label for="date">Description</label>
+    <textarea row="10" col="12" placeholder="Description" class="form-control" [disabled]="!(sms || email)"></textarea>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div class="float-right">
+  <button type="submit" class="btn btn-success">Save</button>
+</div>
