@@ -5,3 +5,4 @@
 .settings/org.eclipse.wst.jsdt.ui.superType.name
 .vscode/settings.json
 .package-lock.json
+/dist/
