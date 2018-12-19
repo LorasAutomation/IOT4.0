@@ -9,6 +9,7 @@ export class AlertProcessComponent implements OnInit {
 
   sms:boolean;
   email:boolean;
+  operator:number;
 
   constructor() { }
 
