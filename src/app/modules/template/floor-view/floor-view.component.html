@@ -4,7 +4,7 @@
   </div>
   <div class="col-md-4">
     <div class=" form-group">
-      <button class="btn btn-secondary btn-sm float-right">Add Line</button>
+      <button class="btn btn-outline-secondary btn-sm float-right">Add Line</button>
     </div>
   </div>
 </div>
@@ -52,17 +52,18 @@
   </div>
 </ng-template>
 
-<accordion>
-  <accordion-group>
-    <button *ngFor="let line of lineList" class="btn btn-link btn-block clearfix" accordion-heading>
+<accordion [closeOthers]="true">
+  <accordion-group *ngFor="let line of lineList">
+    <button class="btn btn-link btn-block clearfix" accordion-heading>
       <div class="pull-left float-left">{{line.name}}</div>
-      <span class="btn btn-light btn-sm float-right pull-right">Add Machine</span>
     </button>
+    <div class="float-right pull-right"><button class="btn btn-outline-primary btn-sm mb-2" (click)="addMachine()">Add Machine</button></div>
+    <div class="clearfix"></div>
     <div class="row">
         <bs-sortable
         [(ngModel)]="machineList"
         [itemTemplate]="itemTemplate"
-        itemClass="sortable-item col-md-2"
+        itemClass="sortable-item col-md-4 col-lg-3"
         itemActiveClass="sortable-item-active"
         placeholderItem="Drag here"
         placeholderClass="placeholderStyle"
