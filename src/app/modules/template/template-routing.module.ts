@@ -10,7 +10,7 @@ const routes: Routes = [
       {
         path: '',
         children: [
-          { path: '', redirectTo: 'setting', pathMatch: 'full' },
+          { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
           { path: 'production', loadChildren: './production/production.module#ProductionModule' },
           { path: 'cnc', loadChildren: './cnc/cnc.module#CncModule' },
           { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
